@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+
+    text-decoration: none;
+    list-style: none;
+}
+
+a:visited {
+    color: crimson;
+}
+
+p:hover {
+    color: green;
+}
+
+input:focus {
+    background-color: yellow;
+}
+
+input:required {
+    border: 3px aquamarine;
+}
