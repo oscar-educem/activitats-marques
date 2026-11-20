@@ -1,0 +1,36 @@
+.grid-container {
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 2fr 1fr;
+    gap: 2em;
+}
+
+.header {
+    grid-column: 2 / -1;
+    grid-row: 1;
+    background-color: grey;
+    color: white;
+}
+
+.sidebar {
+    grid-column: 1 / 2;
+    grid-row: 2;
+    background-color: black;
+    color: white;
+}
+
+.content {
+    grid-column: 2 / -1;
+    grid-row: 2;
+    background-color: black;
+    color: white;
+}
+
+.footer {
+    grid-column: 1 / -1;
+    grid-row: 3;
+    background-color: grey;
+    color: white;
+}

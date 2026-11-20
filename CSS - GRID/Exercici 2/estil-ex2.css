@@ -1,0 +1,61 @@
+.grid-container {
+    display: grid;
+    height: 100vh;
+    width: 100wh;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 2fr;
+    gap: 1em;
+}
+
+.A {
+    grid-column: 1 / 2;
+    grid-row: 1;
+    background-color: black;
+    color: white;
+}
+
+.B {
+    grid-column: 2 /-1;
+    grid-row: 1;
+    background-color: black;
+    color: white;
+}
+
+.C {
+    grid-column: 1 / 2;
+    grid-row: 2;
+    background-color: black;
+    color: white;
+}
+
+.grid-inside {
+    padding: 1em;
+    display: grid;
+    grid-column: 2 / -1;
+    grid-row: 2;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    background-color: black;
+    gap: 1em;
+}
+
+.E {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    background-color: grey;
+    color: black;
+}
+
+.F {
+    grid-column: 1 / 2;
+    grid-row: 2;
+    background-color: grey;
+    color: black;
+}
+
+.G {
+    grid-column: 2 / -1;
+    grid-row: 2;
+    background-color: grey;
+    color: black;
+}

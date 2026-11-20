@@ -1,0 +1,354 @@
+/* ---------- BASE ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: 'Roboto', 'Century Gothic', Futura, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+:root {
+    --naranja: rgb(226, 100, 58);
+    --gris: rgb(110, 110, 118);
+    --gris-claro: rgb(228, 228, 228);
+    --texto: rgb(34, 34, 34);
+}
+
+body {
+    color: var(--texto);
+    background: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    display: block;
+}
+
+/* ---------- LAYOUT PRINCIPAL (GRID) ---------- */
+.layout {
+    display: grid;
+    min-height: 100vh;
+    width: 100vw;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr auto;
+}
+
+/* ---------- HEADER ---------- */
+.header {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    width: 100vw;
+    padding: 1em;
+    background: #fff;
+    border-bottom: 0.06em solid var(--gris-claro);
+}
+
+.img-header {
+    display: grid;
+    justify-items: start;
+    align-items: center;
+}
+
+.img-header img {
+    height: 2.5em;
+    width: auto;
+}
+
+/* NAV LINE (PC) */
+.nav-line {
+    display: none;
+}
+
+
+/* DROP-BOX (móvil) */
+.dropdown {
+    position: relative;
+}
+
+.btn {
+    display: grid;
+    place-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.4em 0;
+}
+
+.btn img {
+    width: 1.8em;
+    height: auto;
+}
+
+.header .menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    min-width: 11em;
+    padding: 0.5em 0;
+    background: #fff;
+    box-shadow: 0 0.25em 0.75em rgba(0, 0, 0, .2);
+    z-index: 10;
+}
+
+.menu a {
+    display: block;
+    padding: 0.6em 1.2em;
+    color: var(--gris);
+}
+
+.menu li:first-child a {
+    font-weight: bold;
+    color: var(--texto);
+}
+
+.menu a:hover {
+    color: var(--naranja);
+}
+
+.dropdown:hover .menu,
+.dropdown:focus-within .menu {
+    display: block;
+}
+
+/* ---------- BANNER ---------- */
+.banner {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    width: 100vw;
+}
+
+.card {
+    position: relative;
+    width: 100vw;
+}
+
+.card img {
+    width: 100vw;
+    aspect-ratio: 375 / 417;
+    object-fit: cover;
+    object-position: 70% center;
+}
+
+/* BANNER SUPERPOSICION */
+.sobreposicio {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    grid-auto-rows: min-content;
+    justify-items: center;
+    align-content: center;
+    gap: 1.2em;
+    padding: 0 8vw;
+    text-align: center;
+    color: #fff;
+}
+
+.sobreposicio h1 {
+    font-size: 2.4em;
+    font-weight: 300;
+    line-height: 1.25;
+}
+
+.sobreposicio p {
+    font-size: 1.3em;
+    font-weight: 300;
+    line-height: 1.4;
+}
+
+.boton_banner {
+    margin-top: 0.4em;
+    padding: 0.9em 1.6em;
+    background-color: var(--naranja);
+    color: #fff;
+    border-radius: 0.2em;
+}
+
+.boton_banner:hover {
+    background-color: rgb(205, 82, 40);
+}
+
+/* ---------- MAIN ---------- */
+.main {
+    grid-column: 1 / -1;
+    grid-row: 3;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-content: start;
+    justify-items: center;
+    gap: 2em;
+    width: 100vw;
+    padding: 3.5em 5vw 2em;
+    text-align: center;
+}
+
+.main h2 {
+    font-size: 1.9em;
+    font-weight: 300;
+    line-height: 1.2;
+    max-width: 10em;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.6em;
+    width: 90vw;
+}
+
+.features li {
+    display: grid;
+    justify-items: center;
+    align-content: start;
+    gap: 1.6em;
+}
+
+.features img {
+    height: 6.5em;
+    width: auto;
+}
+
+.features p {
+    font-size: 1.15em;
+    font-weight: 400;
+}
+
+/* ---------- FOOTER ---------- */
+.footer {
+    grid-column: 1 / -1;
+    grid-row: 4;
+    display: grid;
+    justify-items: center;
+    gap: 1.2em;
+    width: 90vw;
+    margin: 2em auto 0;
+    padding: 1.6em 0 3em;
+    text-align: center;
+    border-top: 0.06em solid var(--gris-claro);
+}
+
+.join {
+    font-size: 0.95em;
+}
+
+.social {
+    display: flex;
+    flex-direction: row;
+    gap: 1.1em;
+}
+
+.social a {
+    display: grid;
+    place-items: center;
+    width: 2.6em;
+    height: 2.6em;
+    border: 0.06em solid var(--gris-claro);
+    border-radius: 50%;
+}
+
+.social a:hover {
+    border-color: var(--naranja);
+}
+
+.social img {
+    width: 1.1em;
+    height: 1.1em;
+}
+
+.copy {
+    font-size: 0.9em;
+    color: rgb(160, 160, 168);
+}
+
+/* ---------- ESCRITORIO ---------- */
+@media (min-width: 48em) {
+    .header {
+        padding: 1.1em 8.3vw;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .img-header img {
+        height: 3em;
+    }
+
+    /* menú en línea */
+    .nav-line {
+        display:flex;
+    }
+
+    .menu-big {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1em;
+    }
+
+    .menu-big li a:hover {
+        color: var(--naranja);
+    }
+
+    .menu-big li:first-child a {
+        font-weight: bold;
+    }
+
+    .header .dropdown {
+        display: none;
+    }
+
+    .card img {
+        aspect-ratio: 1440 / 853;
+        object-position: center;
+    }
+
+    .sobreposicio h1 {
+        font-size: 3.2em;
+    }
+
+    .sobreposicio p {
+        font-size: 1.6em;
+    }
+
+    .boton_banner {
+        font-size: 1.1em;
+        padding: 1em 2.2em;
+    }
+
+    .main {
+        padding: 5em 8.3vw 3em;
+        gap: 2.5em;
+    }
+
+    .main h2 {
+        font-size: 2.6em;
+        max-width: none;
+    }
+
+    .features {
+        grid-template-columns: repeat(3, 1fr);
+        width: 83.4vw;
+        gap: 2vw;
+    }
+
+    .features img {
+        height: 8em;
+    }
+
+    .features p {
+        font-size: 1.4em;
+    }
+
+    .footer {
+        width: 83.4vw;
+        margin-top: 3em;
+    }
+}
