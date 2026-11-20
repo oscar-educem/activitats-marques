@@ -270,7 +270,6 @@ img {
 }
 
 /* ---------- ESCRITORIO ---------- */
-@media (min-width: 48em) {
     .header {
         padding: 1.1em 8.3vw;
         display: flex;
